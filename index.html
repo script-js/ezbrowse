@@ -14,10 +14,26 @@
         }
         window.open(urlrev + "#translate.google.com")
       }
+
+      function addbm() {
+        var url1 = urlip.value
+        if (url1.includes("http://") || url1.includes("https://")) {
+          var urlrev = url1 + "#translate.google.com"
+        } else {
+          var urlrev = "https://" + url1 + "#translate.google.com";
+        }
+        var toadd = "<a href='" + urlrev + "'>" + prompt("Title of Website") + "</a><br>";
+        var removecmd = '"ezbbm",""';
+        if (localStorage.getItem("ezbbm")) {
+          localStorage.setItem("ezbbm",localStorage.getItem("ezbbm") + toadd)
+        } else {
+          localStorage.setItem("ezbbm",toadd + "<a href='javascript:localStorage.setItem(" + removecmd + ")'>Remove All Bookmarks</a>")
+        }
+      }
     </script>
     <h1>EasyBrowse</h1>
     <p>Unblock with ease</p>
-    <input style="height:20px;" id="urlip" onchange="run(this)" placeholder="URL to go to..."> <button style="height:20px;" onclick="run(urlip)">➡</button>
+    <input style="height:20px;" id="urlip" onchange="run(this)" placeholder="Type a URL..." title="URL"> <button onclick="run(urlip)" title="Go">➡</button><button onclick="addbm()" title="Add Site to Bookmarks">➕</button>
     <br>
     <a href="index.html" download="EasyBrowse.html">Download this page</a>
     <div id="bmarks"></div>
