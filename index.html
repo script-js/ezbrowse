@@ -3,7 +3,7 @@
   <head>
     <link rel="stylesheet" href="//js-css.cti.repl.co/styles/darkice.css" />
   </head>
-  <body>
+  <body style="text-align:center">
     <script>
       function run(url) {
         var url1 = url.value
@@ -19,5 +19,6 @@
     <p>Unblock with ease</p>
     <input id="urlip" onchange="run(this)" placeholder="URL to go to..."><button onclick="run(urlip)">➡</button>
     <a href="index.html" download="EasyBrowse.html">Download this page</a>
+    <p><strong><var>Note:</var></strong>EasyBrowse exploits a vulnerability in Securly. All it does is add #translate.google.com to the url, so it won't work with site blockers other than Securly. It may not work for all websites either.</p>
   </body>
 </html>
