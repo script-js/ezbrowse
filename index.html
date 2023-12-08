@@ -45,11 +45,18 @@
     </script>
     <h1>EasyBrowse</h1>
     <p>Unblock with ease</p>
-    <input style="height:20px;" id="urlip" placeholder="Type a URL..."> <button onclick="run(urlip)" title="Go">➡</button><button style="height:30px;" onclick="addbm()" title="Add Site to Bookmarks">➕</button>
+    <input style="height:20px;" id="urlip" placeholder="Type a URL..."> <button onclick="run(urlip)" title="Go">➡</button> <button style="height:25px;" onclick="addbm()" title="Add Site to Bookmarks">➕</button>
     <br>
     <a href="index.html" download="EasyBrowse.html">Download this page</a>
     <div id="bmarks"></div>
-    <script>if (localStorage.getItem("ezbbm")) {bmarks.innerHTML = localStorage.getItem("ezbbm")}</script>
+    <script>
+      if (localStorage.getItem("ezbbm")) {bmarks.innerHTML = localStorage.getItem("ezbbm")}
+      urlip.addEventListener("keyup", function(event) {
+    if (event.key === "Enter") {
+        run(urlip)
+    }
+});
+    </script>
     <p>&nbsp;</p>
     <p style="width:40%;margin:auto"><strong><var>Note:</var></strong> EasyBrowse exploits a vulnerability in Securly. All it does is add #translate.google.com to the url, so it won't work with site blockers other than Securly. It may not work for all websites either.</p>
   </body>
