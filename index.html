@@ -6,7 +6,13 @@
   <body>
     <script>
       function run(url) {
-        window.open(url.value + "#translate.google.com")
+        var url1 = url.value
+        if (url1.includes("http://") || url1.includes("https://")) {
+          var urlrev = url1
+        } else {
+          var urlrev = "https://" + url1;
+        }
+        window.open(urlrev + "#translate.google.com")
       }
     </script>
     <h1>EasyBrowse</h1>
