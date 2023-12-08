@@ -2,6 +2,7 @@
 <html>
   <head>
     <link rel="stylesheet" href="https://js-css.cti.repl.co/styles/darkice.css" />
+    <title>EasyBrowse</title>
   </head>
   <body style="text-align:center">
     <script>
@@ -22,13 +23,16 @@
         } else {
           var urlrev = "https://" + url1 + "#translate.google.com";
         }
-        var toadd = "<a href='" + urlrev + "' target='_blank'>" + prompt("Title of Website") + "</a><br>";
+        var title1 = prompt("Title of Website")
+        if (title1) {
+        var toadd = "<a href='" + urlrev + "' target='_blank'>" + title1 + "</a><br>";
         if (localStorage.getItem("ezbbm")) {
           localStorage.setItem("ezbbm",localStorage.getItem("ezbbm") + toadd)
         } else {
           localStorage.setItem("ezbbm",toadd + "<a href='javascript:removebm()'>Remove All Bookmarks</a>")
         }
         location.reload()
+                          }
       }
 
       function removebm() {
