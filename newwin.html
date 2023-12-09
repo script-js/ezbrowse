@@ -43,7 +43,7 @@
         if (localStorage.getItem("ezbbm")) {
           localStorage.setItem("ezbbm",localStorage.getItem("ezbbm") + toadd)
         } else {
-          localStorage.setItem("ezbbm","<p>--------------------</p>" + toadd + "<p>--------------------</p><a href='javascript:removebm()'>Remove All Bookmarks</a>")
+          localStorage.setItem("ezbbm","<p>--------------------</p><a href='javascript:removebm()'>Remove All Bookmarks</a><p>--------------------</p>" + toadd)
         }
         location.reload()
                           }
