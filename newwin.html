@@ -43,7 +43,7 @@
         if (localStorage.getItem("ezbbm")) {
           localStorage.setItem("ezbbm",localStorage.getItem("ezbbm") + toadd)
         } else {
-          localStorage.setItem("ezbbm",toadd + "<a href='javascript:removebm()'>Remove All Bookmarks</a>")
+          localStorage.setItem("ezbbm","<p>--------------------</p>" + toadd + "<p>--------------------</p><a href='javascript:removebm()'>Remove All Bookmarks</a>")
         }
         location.reload()
                           }
@@ -74,13 +74,13 @@
                 <path d="M5 12l5 5l10 -10" />
             </svg>
         </a>
-        <a class="chc" onclick="addbm()">
+        <a class="chc" onclick="addbm()" title="Bookmark">
             ➕
         </a>
     </div>
     <a href="index.html" download="EasyBrowse.html" style="display:none" id="dbtn">Download this page</a>
-    <div id="bmarks"></div>
-    <p>&nbsp;</p>
+    <div id="bmarks" style="text-align:center"></div>
+    <p>--------------------</p>
     <p style="width:40%;margin:auto"><strong><var>Note:</var></strong> EasyBrowse exploits a vulnerability in Securly. All it does is add #translate.google.com to the url, so it won't work with site blockers other than Securly. It may not work for all websites either.</p>
     <script>
       if (localStorage.getItem("ezbbm")) {bmarks.innerHTML = localStorage.getItem("ezbbm")}
