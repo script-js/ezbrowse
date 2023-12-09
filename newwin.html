@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EasyBrowse</title>
+    <link rel="icon" href="icon.png" />
     <link rel="stylesheet" id="relsn" href="https://script-js.github.io/whitemarket/static/styles/newin.css">
     <link rel="stylesheet" href="https://script-js.github.io/whitemarket/static/styles/cursors.css">
 </head>
@@ -31,7 +32,7 @@
       }
 
       function addbm() {
-        var url1 = urlip.value
+        var url1 = searchq.value
         if (url1.includes("http://") || url1.includes("https://")) {
           var urlrev = url1 + "#translate.google.com"
         } else {
@@ -59,6 +60,7 @@
     </script>
     <svg style="transform: translate(0px, -20%);" fill="#fbfbfb" class="logo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 490 490" xml:space="preserve" style="--darkreader-inline-fill: #1a1c1e; --darkreader-inline-stroke: #e5e3e0;" data-darkreader-inline-fill="" stroke="#fbfbfb" data-darkreader-inline-stroke=""><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="line_19_"> <path d="M15.175,428.75H474.81c8.361,0,15.19-6.829,15.19-15.175V76.425c0-8.345-6.829-15.175-15.175-15.175H15.175 C6.829,61.25,0,68.079,0,76.425V413.56C0,421.921,6.829,428.75,15.175,428.75z M30.625,91.875h428.75v306.25H30.625V91.875z"></path> <circle cx="76.563" cy="122.546" r="15.313"></circle> <circle cx="122.822" cy="122.546" r="15.313"></circle> <circle cx="169.096" cy="122.546" r="15.313"></circle> <rect x="61.25" y="153.125" width="367.5" height="30.625"></rect> <polygon points="245.72,283.144 157.382,283.144 157.382,298.456 245.72,298.456 245.72,340.979 332.618,290.815 245.72,240.636 "></polygon> </g> </g></svg>
     <h1>EasyBrowse</h1>
+    <p>&nbsp;</p>
     <div class="search" id="search">
         <svg xmlns="http://www.w3.org/2000/svg" class="searchic" viewBox="0 0 24 24" stroke-width="1.5"
             stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -73,8 +75,14 @@
                 <path d="M5 12l5 5l10 -10" />
             </svg>
         </a>
-        <a href="index.html" download="EasyBrowse.html" style="display:none" id="dbtn">Download this page</a>
+        <a class="chc" onclick="addbm">
+            ➕
+        </a>
     </div>
+    <a href="index.html" download="EasyBrowse.html" style="display:none" id="dbtn">Download this page</a>
+    <div id="bmarks"></div>
+    <p>&nbsp;</p>
+    <p style="width:40%;margin:auto"><strong><var>Note:</var></strong> EasyBrowse exploits a vulnerability in Securly. All it does is add #translate.google.com to the url, so it won't work with site blockers other than Securly. It may not work for all websites either.</p>
     <script>
       if (localStorage.getItem("ezbbm")) {bmarks.innerHTML = localStorage.getItem("ezbbm")}
       searchq.addEventListener("keyup", function(event) {
