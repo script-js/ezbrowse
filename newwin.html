@@ -9,7 +9,45 @@
     <link rel="stylesheet" href="https://script-js.github.io/whitemarket/static/styles/cursors.css">
 </head>
 <body>
-    <svg fill="#fbfbfb" class="logo" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 490 490" xml:space="preserve" style="--darkreader-inline-fill: #1a1c1e; --darkreader-inline-stroke: #e5e3e0;" data-darkreader-inline-fill="" stroke="#fbfbfb" data-darkreader-inline-stroke=""><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="line_19_"> <path d="M15.175,428.75H474.81c8.361,0,15.19-6.829,15.19-15.175V76.425c0-8.345-6.829-15.175-15.175-15.175H15.175 C6.829,61.25,0,68.079,0,76.425V413.56C0,421.921,6.829,428.75,15.175,428.75z M30.625,91.875h428.75v306.25H30.625V91.875z"></path> <circle cx="76.563" cy="122.546" r="15.313"></circle> <circle cx="122.822" cy="122.546" r="15.313"></circle> <circle cx="169.096" cy="122.546" r="15.313"></circle> <rect x="61.25" y="153.125" width="367.5" height="30.625"></rect> <polygon points="245.72,283.144 157.382,283.144 157.382,298.456 245.72,298.456 245.72,340.979 332.618,290.815 245.72,240.636 "></polygon> </g> </g></svg>
+    <script>
+      function run(url) {
+        var url1 = url.value
+        if (url1.includes("http://") || url1.includes("https://")) {
+          var urlrev = url1
+        } else {
+          var urlrev = "https://" + url1;
+        }
+        window.open(urlrev + "#translate.google.com")
+      }
+
+      function addbm() {
+        var url1 = urlip.value
+        if (url1.includes("http://") || url1.includes("https://")) {
+          var urlrev = url1 + "#translate.google.com"
+        } else {
+          var urlrev = "https://" + url1 + "#translate.google.com";
+        }
+        var title1 = prompt("Title of Website")
+        if (title1) {
+        var toadd = "<a href='" + urlrev + "' target='_blank'>" + title1 + "</a><br>";
+        if (localStorage.getItem("ezbbm")) {
+          localStorage.setItem("ezbbm",localStorage.getItem("ezbbm") + toadd)
+        } else {
+          localStorage.setItem("ezbbm",toadd + "<a href='javascript:removebm()'>Remove All Bookmarks</a>")
+        }
+        location.reload()
+                          }
+      }
+
+      function removebm() {
+        var con = confirm("Are you sure you want to delete all bookmarks?")
+        if (con == true) {
+          localStorage.setItem("ezbbm","")
+          location.reload()
+        }
+      }
+    </script>
+    <svg fill="#fbfbfb" class="logo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 490 490" xml:space="preserve" style="--darkreader-inline-fill: #1a1c1e; --darkreader-inline-stroke: #e5e3e0;" data-darkreader-inline-fill="" stroke="#fbfbfb" data-darkreader-inline-stroke=""><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="line_19_"> <path d="M15.175,428.75H474.81c8.361,0,15.19-6.829,15.19-15.175V76.425c0-8.345-6.829-15.175-15.175-15.175H15.175 C6.829,61.25,0,68.079,0,76.425V413.56C0,421.921,6.829,428.75,15.175,428.75z M30.625,91.875h428.75v306.25H30.625V91.875z"></path> <circle cx="76.563" cy="122.546" r="15.313"></circle> <circle cx="122.822" cy="122.546" r="15.313"></circle> <circle cx="169.096" cy="122.546" r="15.313"></circle> <rect x="61.25" y="153.125" width="367.5" height="30.625"></rect> <polygon points="245.72,283.144 157.382,283.144 157.382,298.456 245.72,298.456 245.72,340.979 332.618,290.815 245.72,240.636 "></polygon> </g> </g></svg>
         
     <div class="search" id="search">
         <svg xmlns="http://www.w3.org/2000/svg" class="searchic" viewBox="0 0 24 24" stroke-width="1.5"
@@ -19,7 +57,7 @@
             <line x1="21" y1="21" x2="15" y2="15" />
         </svg>
         <input placeholder="URL" id="searchq" autocomplete="off" class="searchi">
-        <a class="chc" onclick="ser();">
+        <a class="chc" onclick="run(searchq);">
             <svg xmlns="http://www.w3.org/2000/svg" class="check" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                 <path d="M5 12l5 5l10 -10" />
