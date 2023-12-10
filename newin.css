@@ -204,7 +204,7 @@ body {
     transition: ease 0.5s;
 }
 
-.search:hovr {
+.search:hover {
     background-color: var(--search-background-hover);
     border: 1px solid var(--search-border-hover);
     outline: 1px solid var(--search-outline-hover);
