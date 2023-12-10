@@ -220,9 +220,11 @@ body {
 }
 
 .searchi:focus {
-    --search-border: #171717;
-    --search-background: #0c0c0c;
-    --search-outline: #0c0c0c;
+    .search {
+    background-color: var(--search-background-hover);
+    border: 1px solid var(--search-border-hover);
+    outline: 1px solid var(--search-outline-hover);
+    }
 }
 
 .searchic {
