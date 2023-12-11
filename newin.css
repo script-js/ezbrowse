@@ -226,13 +226,3 @@ a.chc {
     background-color: white;
     color: black;
   }
-      #back {
-        position: fixed;
-        top: 0px;
-        display: none;
-        left: 0px;
-        width: 101%;
-        height: 101%;
-        border: none;
-        background-color: white;
-      }
