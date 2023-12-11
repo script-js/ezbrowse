@@ -33,8 +33,8 @@
     /* icons */
     --search-icon-color: white;
     --check-color: white;
-    --check-background-hover: #4cb05e;
-    --check-color-hover: #2b6836;
+    --check-background-hover: white;
+    --check-color-hover: black;
 }
 
 [data-theme="light"] {
@@ -57,8 +57,8 @@
     /* icons */
     --search-icon-color: white;
     --check-color: white;
-    --check-background-hover: #5fd073;
-    --check-color-hover: #3f8e4e;
+    --check-background-hover: black;
+    --check-color-hover: white;
 }
 
 ::selection {
