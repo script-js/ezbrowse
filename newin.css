@@ -38,8 +38,8 @@
 }
 
 [data-theme="light"] {
-    --body: #686868;
-    --color: white;
+    --body: #dcdcde;
+    --color: black;
     --userselect-background: #696969;
     --userselect-color: #1d1d1d;
 
@@ -59,81 +59,6 @@
     --check-color: white;
     --check-background-hover: #5fd073;
     --check-color-hover: #3f8e4e;
-}
-
-[data-theme="night"] {
-    --body: #181446;
-    --color: white;
-    --userselect-background: #32299b;
-    --userselect-color: #b0a95d;
-
-    /* logo */
-    --logoColor: #fff7a5;
-
-    /* search */
-    --search-color: #efe688;
-    --search-background: #0f0c32;
-    --search-border: #0f0c32;
-    --search-outline: #efe688;
-    --search-background-hover: #060516;
-    --search-border-hover: #000000;
-    --search-outline-hover: #051004;
-
-    /* icons */
-    --search-icon-color: #fff7a5;
-    --check-color: #fff7a5;
-    --check-background-hover: #1e195c;
-    --check-color-hover: #efe688;
-}
-
-[data-theme="fracital"] {
-    --body: #222;
-    --color: white;
-    --userselect-background: #575757;
-    --userselect-color: #ff40f7;
-
-    /* logo */
-    --logoColor: #FF40F7;
-
-    /* search */
-    --search-color: #ff40f7;
-    --search-background: #1B1A1A;
-    --search-border: #0f0c32;
-    --search-outline: #ff40f7;
-    --search-background-hover: #151515;
-    --search-border-hover: #151515;
-    --search-outline-hover: #b727b1;
-
-    /* icons */
-    --search-icon-color: #ff40f7;
-    --check-color: #ff40f7;
-    --check-background-hover: #2E2D2E;
-    --check-color-hover: #ff40f7;
-}
-
-[data-theme="almond"] {
-    --body: #131313;
-    --color: white;
-    --userselect-background: #ffffff1a;
-    --userselect-color: #FFC889;
-
-    /* logo */
-    --logoColor: #E89D46;
-
-    /* search */
-    --search-color: #E89D46;
-    --search-background: #1B1A1A;
-    --search-border: #0f0c32;
-    --search-outline: #E89D46;
-    --search-background-hover: #151515;
-    --search-border-hover: #151515;
-    --search-outline-hover: #b97e3a;
-
-    /* icons */
-    --search-icon-color: #E89D46;
-    --check-color: #E89D46;
-    --check-background-hover: #2E2D2E;
-    --check-color-hover: #E89D46;
 }
 
 ::selection {
@@ -271,3 +196,43 @@ a.chc {
     outline: 1px solid var(--search-outline);
     border-radius: 37px;
 }
+
+       a {
+    color: white;
+  }
+
+
+      .settings {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        align-items: center;
+        width: 35px;
+        height: 34px;
+        border-radius: 10px;
+        background-color: var(--search-background);
+        transition: ease 0.5s;
+        border: 1px solid var(--search-border);
+        outline: 1px solid var(--search-outline);
+        cursor: pointer;
+      }
+
+      .settings:hover {
+        background-color: var(--search-background-hover);
+        border: 1px solid var(--search-border-hover);
+        outline: 1px solid var(--search-outline-hover);
+      }
+  a:hover {
+    background-color: white;
+    color: black;
+  }
+      #back {
+        position: fixed;
+        top: 0px;
+        display: none;
+        left: 0px;
+        width: 101%;
+        height: 101%;
+        border: none;
+        background-color: white;
+      }
