@@ -9,7 +9,7 @@
   "theme_color": "#1c1c1c",
   "categories": [],
   "screenshots": [],
-  "icons": [],
+  "icons": ["icon.png"],
   "shortcuts": [],
   "id": "ezbrowse",
   "description": "Unblock Easier"
