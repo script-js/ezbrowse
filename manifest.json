@@ -1,0 +1,16 @@
+{
+  "background_color": "#1c1c1c",
+  "display": "standalone",
+  "name": "EasyBrowse",
+  "orientation": "any",
+  "scope": "/ezbrowse",
+  "short_name": "EasyBrowse",
+  "start_url": "/ezbrowse",
+  "theme_color": "#1c1c1c",
+  "categories": [],
+  "screenshots": [],
+  "icons": [],
+  "shortcuts": [],
+  "id": "ezbrowse",
+  "description": "Unblock Easier"
+}
